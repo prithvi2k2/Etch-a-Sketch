@@ -1,11 +1,13 @@
 const main = document.querySelector('.container');
 let drag = false;
 let grid = true;
-main.addEventListener('mouseleave',()=>{drag=false});
-// default color
+main.addEventListener('dragstart',(e)=>{e.preventDefault()});
+
+// color
 let color = document.getElementById('color').value;
 const paint = (e) => {
-    if(drag)
+    if(drag && e.buttons!=0)
+
         e.target.style.background = color;
 }
 
@@ -45,7 +47,6 @@ const Draw = (size) => {
         for (let j = 0; j < size; j++) {
             // innerContainer
             let cont = document.createElement('div');
-            cont.setAttribute("draggable",false); 
             cont.style.cssText =
                 `width:calc(50vh/${size});
                 height:calc(50vh/${size})`;
