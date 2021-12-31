@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    border:0;
+    font-family: cursive;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    height: 100vh;
+}
+.header{
+    text-align: center;
+}
+.sketch{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    width: 50vh;
+}
+.container{
+    text-align: center ;
+    border: 0.5px dotted gray;
+    max-width: 50vh;
+    height: fit-content;
+    max-height: 50vh;
+    min-width: 50vh;
+    max-height: 50vh;
+}
+.rowCont{
+    display:flex;
+}
+.innerCont{
+    box-sizing:border-box;
+    border:0.5px solid gray;
+}
+.size{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#slider{
+    width:50vh;
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+}

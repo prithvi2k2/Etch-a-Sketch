@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
+    <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="header">
+        <h1>Etch-A-Sketch</h1>
+    </div>
+    <div class="sketch">
+        <div class="controls">
+            <div>
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color" value="#5CE4FF">
+            </div>
+            <button onclick="Grid()">Toggle Grid</button>
+            <button onclick="eraseAll()">Erase All</button>
+        </div>
+
+        <!-- Etch-A-Sketch main .container -->
+        <div class="container" draggable="false"> </div>
+        <div class="size">
+            <input type="range" min="1" max="100" value="15" id="slider">
+            <div class="currSize">Size: 15 x 15</div>  
+        </div>
+    </div>
+    <div class="footer">Created by @prithvi2k2 as part of Odin Project</div>
     <script src="script.js"></script>
 </body>
+
 </html>
